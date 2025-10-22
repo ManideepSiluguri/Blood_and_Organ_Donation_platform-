@@ -1,44 +1,41 @@
 package com.example.bloodplatform.model;
 
 import jakarta.persistence.*;
-import lombok.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
-@Table(name = "emergency_requests")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Table(name = "emergency_request")
 public class EmergencyRequest {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String hospitalName;
-    private String contactPerson;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
+    private String description;
+    private String location;
     private String contactPhone;
-    private String contactEmail;
+    private String bloodGroupNeeded;
+    private LocalDateTime createdAt = LocalDateTime.now();
+    private String status; // NEW, RESPONDED, CLOSED
+    @Column(nullable = true)
+    private String responder; // username or phone who claimed
 
-    @Enumerated(EnumType.STRING)
-    private BloodType bloodType;
+    public EmergencyRequest() {}
 
-    @Enumerated(EnumType.STRING)
-    private OrganType organType;
-
-    private Integer unitsRequired;
-    private String city;
-    private String state;
-    private String notes;
-
-    private LocalDateTime createdAt;
-
-    private boolean resolved;
-
-    @PrePersist
-    public void onCreate() {
-        this.createdAt = LocalDateTime.now();
-    }
+    // getters and setters
+    public UUID getId() { return id; }
+    public void setId(UUID id) { this.id = id; }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+    public String getLocation() { return location; }
+    public void setLocation(String location) { this.location = location; }
+    public String getContactPhone() { return contactPhone; }
+    public void setContactPhone(String contactPhone) { this.contactPhone = contactPhone; }
+    public String getBloodGroupNeeded() { return bloodGroupNeeded; }
+    public void setBloodGroupNeeded(String bloodGroupNeeded) { this.bloodGroupNeeded = bloodGroupNeeded; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+    public String getResponder() { return responder; }
+    public void setResponder(String responder) { this.responder = responder; }
 }

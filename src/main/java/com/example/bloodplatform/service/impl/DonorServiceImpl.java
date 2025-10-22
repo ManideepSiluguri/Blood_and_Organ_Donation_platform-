@@ -1,59 +1,56 @@
 package com.example.bloodplatform.service.impl;
-import com.example.bloodplatform.model.BloodType;
+
+import com.example.bloodplatform.exception.ResourceNotFoundException;
 import com.example.bloodplatform.model.Donor;
 import com.example.bloodplatform.repository.DonorRepository;
 import com.example.bloodplatform.service.DonorService;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import java.time.LocalDate;
-import java.time.Period;
+
 import java.util.List;
-import java.util.Optional;
+import java.util.UUID;
+
 @Service
-@RequiredArgsConstructor
-@Transactional
 public class DonorServiceImpl implements DonorService {
+
     private final DonorRepository donorRepository;
+
+    @Autowired
+    public DonorServiceImpl(DonorRepository donorRepository) { this.donorRepository = donorRepository; }
+
     @Override
-    public Donor register(Donor donor) {
-        updateEligibility(donor);
-        donor.setAvailable(true);
-        return donorRepository.save(donor);
-    }
+    public Donor createDonor(Donor donor) { return donorRepository.save(donor); }
+
     @Override
-    public Optional<Donor> findById(Long id) {
-        return donorRepository.findById(id);
+    public Donor updateDonor(UUID id, Donor donor) {
+        Donor ex = donorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Donor", id));
+        ex.setFirstName(donor.getFirstName());
+        ex.setLastName(donor.getLastName());
+        ex.setEmail(donor.getEmail());      // added
+        ex.setPhone(donor.getPhone());
+        ex.setAddress(donor.getAddress());
+        ex.setBloodGroup(donor.getBloodGroup());
+        ex.setAge(donor.getAge());          // added
+        ex.setGender(donor.getGender());    // added (optional, but useful)
+        ex.setLastDonationDate(donor.getLastDonationDate());
+        ex.setActive(donor.getActive());
+        return donorRepository.save(ex);
     }
+
     @Override
-    public Donor update(Long id, Donor update) {
-        return donorRepository.findById(id).map(d -> {
-            d.setFullName(update.getFullName());
-            d.setPhone(update.getPhone());
-            d.setAge(update.getAge());
-            d.setNotes(update.getNotes());
-            d.setLocation(update.getLocation());
-            d.setOrganDonor(update.isOrganDonor());
-            d.setAvailable(update.isAvailable());
-            d.setLastDonationDate(update.getLastDonationDate());
-            updateEligibility(d);
-            return donorRepository.save(d);
-        }).orElseThrow(() -> new IllegalArgumentException("Donor not found"));
-    }
+    public void deleteDonor(UUID id) { donorRepository.deleteById(id); }
+
     @Override
-    public List<Donor> searchByBloodAndCity(BloodType bloodType, String city) {
-        if (city == null || city.isBlank()) {
-            return donorRepository.findAvailableByBloodType(bloodType);
-        }
-        return donorRepository.findAvailableByBloodTypeAndCity(bloodType, city);
+    public Page<Donor> searchDonors(String city, Pageable pageable) {
+        if (city == null || city.isBlank()) return donorRepository.findAll(pageable);
+        return donorRepository.findByAddressContainingIgnoreCase(city, pageable);
     }
+
     @Override
-    public void updateEligibility(Donor donor) {
-        if (donor.getLastDonationDate() == null) {
-            return;
-        }
-        LocalDate last = donor.getLastDonationDate();
-        int days = Period.between(last, LocalDate.now()).getDays();
-        donor.setAvailable(days >= 56);
-    }
+    public List<Donor> findByBloodGroup(String bloodGroup) { return donorRepository.findByBloodGroup(bloodGroup); }
+
+    @Override
+    public Donor getById(UUID id) { return donorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Donor", id)); }
 }
