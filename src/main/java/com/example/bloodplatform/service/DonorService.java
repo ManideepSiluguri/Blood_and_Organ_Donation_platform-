@@ -15,4 +15,3 @@ public interface DonorService {
     List<Donor> findByBloodGroup(String bloodGroup);
     Donor getById(UUID id);
 }
-

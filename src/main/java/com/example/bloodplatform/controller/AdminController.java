@@ -2,7 +2,6 @@ package com.example.bloodplatform.controller;
 
 import com.example.bloodplatform.model.Admin;
 import com.example.bloodplatform.repository.AdminRepository;
-import com.example.bloodplatform.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,5 +25,5 @@ public class AdminController {
     public ResponseEntity<Admin> create(@RequestBody Admin a){ return ResponseEntity.ok(adminRepository.save(a)); }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Admin> get(@PathVariable UUID id){ return ResponseEntity.ok(adminRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Admin", id))); }
+    public ResponseEntity<Admin> get(@PathVariable UUID id){ return ResponseEntity.ok(adminRepository.findById(id).orElseThrow()); }
 }

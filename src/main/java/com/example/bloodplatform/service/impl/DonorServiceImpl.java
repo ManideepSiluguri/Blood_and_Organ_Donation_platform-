@@ -28,12 +28,9 @@ public class DonorServiceImpl implements DonorService {
         Donor ex = donorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Donor", id));
         ex.setFirstName(donor.getFirstName());
         ex.setLastName(donor.getLastName());
-        ex.setEmail(donor.getEmail());      // added
         ex.setPhone(donor.getPhone());
         ex.setAddress(donor.getAddress());
         ex.setBloodGroup(donor.getBloodGroup());
-        ex.setAge(donor.getAge());          // added
-        ex.setGender(donor.getGender());    // added (optional, but useful)
         ex.setLastDonationDate(donor.getLastDonationDate());
         ex.setActive(donor.getActive());
         return donorRepository.save(ex);

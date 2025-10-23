@@ -12,4 +12,3 @@ public interface DonorRepository extends JpaRepository<Donor, UUID> {
     List<Donor> findByBloodGroup(String bloodGroup);
     Page<Donor> findByAddressContainingIgnoreCase(String city, Pageable pageable);
 }
-

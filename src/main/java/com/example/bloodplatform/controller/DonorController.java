@@ -35,7 +35,7 @@ public class DonorController {
     public ResponseEntity<Page<Donor>> list(@RequestParam(required=false) String city,
                                             @RequestParam(defaultValue="0") int page,
                                             @RequestParam(defaultValue="10") int size) {
-        PageRequest pr = PageRequest.of(page, size, Sort.by(Sort.Direction.ASC, "firstName"));
+        PageRequest pr = PageRequest.of(page, size, Sort.by("firstName"));
         return ResponseEntity.ok(donorService.searchDonors(city, pr));
     }
 

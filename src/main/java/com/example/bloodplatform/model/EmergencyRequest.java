@@ -16,7 +16,6 @@ public class EmergencyRequest {
     private String bloodGroupNeeded;
     private LocalDateTime createdAt = LocalDateTime.now();
     private String status; // NEW, RESPONDED, CLOSED
-    @Column(nullable = true)
     private String responder; // username or phone who claimed
 
     public EmergencyRequest() {}
