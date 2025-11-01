@@ -8,20 +8,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.UUID;
 
 @Service
 public class DonorServiceImpl implements DonorService {
-
     private final DonorRepository donorRepository;
 
     @Autowired
-    public DonorServiceImpl(DonorRepository donorRepository) { this.donorRepository = donorRepository; }
+    public DonorServiceImpl(DonorRepository donorRepository) {
+        this.donorRepository = donorRepository;
+    }
 
     @Override
-    public Donor createDonor(Donor donor) { return donorRepository.save(donor); }
+    public Donor createDonor(Donor donor) {
+        return donorRepository.save(donor);
+    }
 
     @Override
     public Donor updateDonor(UUID id, Donor donor) {
@@ -37,7 +39,9 @@ public class DonorServiceImpl implements DonorService {
     }
 
     @Override
-    public void deleteDonor(UUID id) { donorRepository.deleteById(id); }
+    public void deleteDonor(UUID id) {
+        donorRepository.deleteById(id);
+    }
 
     @Override
     public Page<Donor> searchDonors(String city, Pageable pageable) {
@@ -46,8 +50,12 @@ public class DonorServiceImpl implements DonorService {
     }
 
     @Override
-    public List<Donor> findByBloodGroup(String bloodGroup) { return donorRepository.findByBloodGroup(bloodGroup); }
+    public List<Donor> findByBloodGroup(String bloodGroup) {
+        return donorRepository.findByBloodGroup(bloodGroup);
+    }
 
     @Override
-    public Donor getById(UUID id) { return donorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Donor", id)); }
+    public Donor getById(UUID id) {
+        return donorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Donor", id));
+    }
 }

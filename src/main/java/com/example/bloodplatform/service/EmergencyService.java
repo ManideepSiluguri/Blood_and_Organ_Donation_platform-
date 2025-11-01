@@ -1,7 +1,6 @@
 package com.example.bloodplatform.service;
 
 import com.example.bloodplatform.model.EmergencyRequest;
-
 import java.util.List;
 import java.util.UUID;
 

@@ -1,11 +1,12 @@
-package com.example.bloodplatform.repository;
+package com.example.bloodplatform.service;
 
 import com.example.bloodplatform.model.Recipient;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 
-public interface RecipientRepository extends JpaRepository<Recipient, UUID> {
+public interface RecipientService {
+    Recipient createRecipient(Recipient recipient);
+    Recipient getById(UUID id);
     Page<Recipient> findByStatus(String status, Pageable pageable);
 }
