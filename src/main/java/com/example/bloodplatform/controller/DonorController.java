@@ -19,18 +19,23 @@ import java.util.UUID;
 @RequestMapping("/api/donors")
 public class DonorController {
     private final DonorService donorService;
+
     @Autowired
-    public DonorController(DonorService donorService) { this.donorService = donorService; }
+    public DonorController(DonorService donorService) {
+        this.donorService = donorService;
+    }
 
     @PostMapping
     public ResponseEntity<DonorResponseDto> create(@Valid @RequestBody DonorRequestDto req) {
         var donor = donorService.createDonor(DonorMapper.fromDto(req));
         return ResponseEntity.status(HttpStatus.CREATED).body(DonorMapper.toDto(donor));
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<DonorResponseDto> getById(@PathVariable UUID id) {
         return ResponseEntity.ok(DonorMapper.toDto(donorService.getById(id)));
     }
+
     @GetMapping
     public ResponseEntity<Page<DonorResponseDto>> list(@RequestParam(required = false) String city,
                                                        @RequestParam(defaultValue = "0") int page,
@@ -39,16 +44,19 @@ public class DonorController {
         var donors = donorService.searchDonors(city, pr).map(DonorMapper::toDto);
         return ResponseEntity.ok(donors);
     }
+
     @PutMapping("/{id}")
     public ResponseEntity<DonorResponseDto> update(@PathVariable UUID id, @Valid @RequestBody DonorRequestDto req) {
         var donor = donorService.updateDonor(id, DonorMapper.fromDto(req));
         return ResponseEntity.ok(DonorMapper.toDto(donor));
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable UUID id) {
         donorService.deleteDonor(id);
         return ResponseEntity.noContent().build();
     }
+
     @GetMapping("/search-by-blood")
     public ResponseEntity<List<DonorResponseDto>> byBlood(@RequestParam String bloodGroup) {
         var donors = donorService.findByBloodGroup(bloodGroup).stream().map(DonorMapper::toDto).toList();

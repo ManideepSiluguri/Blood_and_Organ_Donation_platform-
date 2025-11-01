@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="635f5a64-3833-4350-9b47-a2a4a64410f9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/DonorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/DonorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/OrganDonationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/OrganDonationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/RecipientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/RecipientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/exception/ApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/exception/ApiExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/Donor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/Donor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/EmergencyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/EmergencyRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/OrganDonation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/OrganDonation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/Recipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/impl/DonorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/impl/DonorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +64,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BloodPlatformApplication.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/silug/OneDrive/Desktop/bloodplatform/bloodplatform/backend",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BloodPlatformApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/silug/OneDrive/Desktop/bloodplatform/bloodplatform/backend&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\silug\OneDrive\Desktop\bloodplatform\bloodplatform\backend" />

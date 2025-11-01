@@ -3,8 +3,7 @@ package com.example.bloodplatform.controller;
 import com.example.bloodplatform.dto.AdminRequestDto;
 import com.example.bloodplatform.dto.AdminResponseDto;
 import com.example.bloodplatform.mapper.AdminMapper;
-import com.example.bloodplatform.model.Admin;
-import com.example.bloodplatform.repository.AdminRepository;
+import com.example.bloodplatform.service.AdminService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,16 +14,16 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/admin")
 public class AdminController {
-    private final AdminRepository adminRepository;
+    private final AdminService adminService;
 
     @Autowired
-    public AdminController(AdminRepository adminRepository) {
-        this.adminRepository = adminRepository;
+    public AdminController(AdminService adminService) {
+        this.adminService = adminService;
     }
 
     @GetMapping("/users")
     public ResponseEntity<List<AdminResponseDto>> list() {
-        var admins = adminRepository.findAll().stream()
+        var admins = adminService.findAll().stream()
                 .map(AdminMapper::toDto)
                 .toList();
         return ResponseEntity.ok(admins);
@@ -32,14 +31,13 @@ public class AdminController {
 
     @PostMapping
     public ResponseEntity<AdminResponseDto> create(@Valid @RequestBody AdminRequestDto req) {
-        Admin a = AdminMapper.fromDto(req);
-        Admin saved = adminRepository.save(a);
-        return ResponseEntity.ok(AdminMapper.toDto(saved));
+        var admin = adminService.createAdmin(AdminMapper.fromDto(req));
+        return ResponseEntity.ok(AdminMapper.toDto(admin));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<AdminResponseDto> get(@PathVariable UUID id) {
-        Admin a = adminRepository.findById(id).orElseThrow();
-        return ResponseEntity.ok(AdminMapper.toDto(a));
+        var admin = adminService.getById(id);
+        return ResponseEntity.ok(AdminMapper.toDto(admin));
     }
 }

@@ -18,7 +18,7 @@ public class EmergencyRequest {
     private String description;
     private String location;
 
-    @Pattern(regexp = "^[0-9]{10}$")
+    @jakarta.validation.constraints.Pattern(regexp = "^[0-9]{10}$")
     private String contactPhone;
 
     private String bloodGroupNeeded;
