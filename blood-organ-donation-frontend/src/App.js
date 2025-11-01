@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AppBarHeader from "./components/AppBarHeader";
+import Home from "./pages/Home";
+import RegisterBloodDonor from "./pages/RegisterBloodDonor";
+import SearchBloodDonors from "./pages/SearchBloodDonors";
+import RegisterOrganDonor from "./pages/RegisterOrganDonor";
+import SearchOrganDonors from "./pages/SearchOrganDonors";
+import EmergencyRequest from "./pages/EmergencyRequest";
+import AdminDashboard from "./pages/AdminDashboard";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AppBarHeader />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register-blood-donor" element={<RegisterBloodDonor />} />
+        <Route path="/search-blood-donors" element={<SearchBloodDonors />} />
+        <Route path="/register-organ-donor" element={<RegisterOrganDonor />} />
+        <Route path="/search-organ-donors" element={<SearchOrganDonors />} />
+        <Route path="/emergency" element={<EmergencyRequest />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
