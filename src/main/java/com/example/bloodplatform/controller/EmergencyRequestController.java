@@ -18,29 +18,41 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class EmergencyRequestController {
     private final EmergencyService emergencyService;
+    private final NotificationController notificationController;
 
     @Autowired
-    public EmergencyRequestController(EmergencyService emergencyService) {
+    public EmergencyRequestController(EmergencyService emergencyService, NotificationController notificationController) {
         this.emergencyService = emergencyService;
+        this.notificationController = notificationController;
     }
 
     @PostMapping
     public ResponseEntity<EmergencyResponseDto> create(@Valid @RequestBody EmergencyRequestDto req) {
         var emergency = emergencyService.create(EmergencyRequestMapper.fromDto(req));
+
+        // Send real-time notification
+        notificationController.broadcastToBloodGroup(
+                req.getBloodGroupNeeded(),
+                "🚨 Emergency Blood Request",
+                "Patient needs " + req.getBloodGroupNeeded() + " blood urgently at " + req.getLocation()
+        );
+
         return ResponseEntity.ok(EmergencyRequestMapper.toDto(emergency));
     }
 
     @PostMapping("/{id}/claim")
     public ResponseEntity<EmergencyResponseDto> claim(@PathVariable UUID id, @RequestParam String responder) {
         var emergency = emergencyService.claim(id, responder);
+
+        // Send notification that request was claimed
+        notificationController.emergencyBroadcast(
+                emergency.getLocation(),
+                "✅ Emergency Responded",
+                "Someone nearby is on the way to help!"
+        );
+
         return ResponseEntity.ok(EmergencyRequestMapper.toDto(emergency));
     }
 
-    @GetMapping
-    public ResponseEntity<List<EmergencyResponseDto>> list(@RequestParam(required = false) String status) {
-        if (status == null) status = "NEW";
-        var emergencies = emergencyService.listByStatus(status)
-                .stream().map(EmergencyRequestMapper::toDto).toList();
-        return ResponseEntity.ok(emergencies);
-    }
+    // ... rest of controller
 }

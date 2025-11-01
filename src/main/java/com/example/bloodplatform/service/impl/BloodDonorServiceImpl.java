@@ -58,4 +58,9 @@ public class BloodDonorServiceImpl implements BloodDonorService {
     public BloodDonor getById(UUID id) {
         return donorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("BloodDonor", id));
     }
+
+    @Override
+    public List<BloodDonor> findAll() {
+        return donorRepository.findAll();
+    }
 }

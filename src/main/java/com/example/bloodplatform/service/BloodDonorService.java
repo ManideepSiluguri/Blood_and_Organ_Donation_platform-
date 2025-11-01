@@ -13,4 +13,5 @@ public interface BloodDonorService {
     Page<BloodDonor> searchDonors(String city, Pageable pageable);
     List<BloodDonor> findByBloodGroup(String bloodGroup);
     BloodDonor getById(UUID id);
+    List<BloodDonor> findAll();
 }
