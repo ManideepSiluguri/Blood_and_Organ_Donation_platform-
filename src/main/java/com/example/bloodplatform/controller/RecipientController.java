@@ -10,10 +10,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.UUID;
+import java.util.UUID;import org.springframework.web.bind.annotation.RequestMethod;
+
 
 @RestController
 @RequestMapping("/api/recipients")
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
+
 public class RecipientController {
     private final RecipientService recipientService;
 

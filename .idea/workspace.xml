@@ -5,42 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="635f5a64-3833-4350-9b47-a2a4a64410f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/components/AppBarHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/components/DonorCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/AdminDashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/EmergencyRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/RegisterBloodDonor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/RegisterDonor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/RegisterOrganDonor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/SearchBloodDonors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/SearchOrganDonors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/BloodDonorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/OrganDonorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/dto/BloodDonorRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/dto/BloodDonorResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/mapper/BloodDonorMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/BloodDonor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/repository/BloodDonorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/BloodDonorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/OrganDonorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/impl/BloodDonorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/OrganDonationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/dto/OrganDonationRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/dto/OrganDonorRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/dto/OrganDonationResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/dto/OrganDonorResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/mapper/OrganDonationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/mapper/OrganDonorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/OrganDonation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/OrganDonor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/repository/OrganDonationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/repository/OrganDonorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/OrganDonationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/impl/OrganDonationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/impl/OrganDonorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/SearchOrganDonors.js" beforeDir="false" afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/SearchOrganDonors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/BloodDonorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/BloodDonorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/DonorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/DonorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/EmergencyRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/EmergencyRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/OrganDonorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/OrganDonorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/RecipientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/RecipientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/controller/DonorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/controller/DonorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/controller/EmergencyRequestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/controller/EmergencyRequestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/controller/OrganDonationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/controller/RecipientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/controller/RecipientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/dto/OrganDonationRequestDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/dto/OrganDonationResponseDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/mapper/OrganDonationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/model/OrganDonation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/repository/OrganDonationRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/service/OrganDonationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/bloodplatform/service/impl/OrganDonationServiceImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

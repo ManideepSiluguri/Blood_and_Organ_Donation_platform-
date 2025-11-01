@@ -8,8 +8,9 @@ import RegisterOrganDonor from "./pages/RegisterOrganDonor";
 import SearchOrganDonors from "./pages/SearchOrganDonors";
 import EmergencyRequest from "./pages/EmergencyRequest";
 import AdminDashboard from "./pages/AdminDashboard";
+import Login from "./pages/Login";
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <AppBarHeader />
@@ -21,7 +22,10 @@ export default function App() {
         <Route path="/search-organ-donors" element={<SearchOrganDonors />} />
         <Route path="/emergency" element={<EmergencyRequest />} />
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
 }
+
+export default App;

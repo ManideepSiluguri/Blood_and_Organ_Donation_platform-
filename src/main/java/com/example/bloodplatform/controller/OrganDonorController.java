@@ -11,9 +11,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 
 @RestController
-@RequestMapping("/api/organ-donors")
+@RequestMapping("/api/organ-donors")@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
+
 public class OrganDonorController {
     private final OrganDonorService organService;
 
