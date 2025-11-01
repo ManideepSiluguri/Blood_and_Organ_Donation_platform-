@@ -5,6 +5,12 @@ import { Bloodtype } from "@mui/icons-material";
 
 export default function Home() {
   return (
+    <NotificationCenter
+          donorId={userId}
+          bloodGroup={userBloodGroup}
+          city={userCity}
+    />
+
     <Paper elevation={3} sx={{ maxWidth: 700, margin: "48px auto", padding: 4 }}>
       <Box sx={{ textAlign: "center", mb: 4 }}>
         <Bloodtype color="primary" sx={{ fontSize: 64, mb: 2 }} />

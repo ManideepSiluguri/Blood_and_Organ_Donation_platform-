@@ -9,6 +9,8 @@ import SearchOrganDonors from "./pages/SearchOrganDonors";
 import EmergencyRequest from "./pages/EmergencyRequest";
 import AdminDashboard from "./pages/AdminDashboard";
 import Login from "./pages/Login";
+import AnalyticsDashboard from "./pages/AnalyticsDashboard";
+import SmartMatching from "./pages/SmartMatching";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/emergency" element={<EmergencyRequest />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/analytics" element={<AnalyticsDashboard />} />
+        <Route path="/smart-matching" element={<SmartMatching />} />
       </Routes>
     </BrowserRouter>
   );
