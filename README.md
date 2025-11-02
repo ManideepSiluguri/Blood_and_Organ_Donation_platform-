@@ -57,20 +57,6 @@ A full-stack Java + React platform solving real-time blood and organ donation pr
 - **AI/ML:** Java scoring algorithms (easy to extend to ML services)
 - **Optional Real-Time:** Spring WebSocket/STOMP, sockjs-client, @stomp/stompjs
 
-## 🧪 API Endpoints (Examples)
-
-#### Matching
-- `GET /api/matching/blood-donors?bloodGroup=O+&city=Hyderabad`
-- `GET /api/matching/organ-donors?organType=Kidney&city=Hyderabad&bloodGroup=B-&age=30`
-
-#### Analytics
-- `GET /api/analytics/overview`
-- `GET /api/analytics/blood-distribution`
-- `GET /api/analytics/organ-distribution`
-- `GET /api/analytics/demand-prediction`
-- `GET /api/analytics/critical-shortages`
-- `GET /api/analytics/donor-retention`
 
 
-## 🗂 Project Structure
 
