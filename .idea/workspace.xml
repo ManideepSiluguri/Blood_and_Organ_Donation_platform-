@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="635f5a64-3833-4350-9b47-a2a4a64410f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/components/NotificationCenter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/AnalyticsDashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/SmartMatching.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/utils/websocket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/AnalyticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/MatchingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/NotificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/dto/NotificationMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/DemandPrediction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/model/DonationStatistics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/AnalyticsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/DonorMatchingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/components/AppBarHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/components/AppBarHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/blood-organ-donation-frontend/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/EmergencyRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/controller/EmergencyRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/BloodDonorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/BloodDonorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/impl/BloodDonorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bloodplatform/service/impl/BloodDonorServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
